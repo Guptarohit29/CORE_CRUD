@@ -1,0 +1,54 @@
+﻿<h1>
+    WELCOME CHETU INDIA
+</h1>
+<style>
+    h1 {
+        background-color: aqua
+    }
+
+    body {
+        background-color: red
+    }
+</style>
+@model CORE12.Models.MODELCLASS
+
+
+<div class="row">
+    <div class="col-md-4">
+
+        <form asp-action="add_emp" asp-controller="Home">
+            <input type="hidden" asp-for="Id" />
+            <div clas="form-group">
+                <label>NAME</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div clas="form-group">
+                <label>SURName</label>
+                <input asp-for="Surname" class="form-control" />
+                <span asp-validation-for="Surname" class="text-danger"></span>
+            </div>
+
+            <div clas="form-group">
+                <label>city</label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+
+            <div clas="form-group">
+                <label>AGE</label>
+                <input asp-for="Age" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+
+            <div clas="form-group">
+                <label>STATE</label>
+                <input asp-for="State" class="form-control" />
+                <span asp-validation-for="State" class="text-danger"></span>
+            </div>
+            <div>
+                <input type="submit" value="Submit" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>

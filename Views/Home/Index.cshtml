@@ -1,0 +1,35 @@
+﻿@model List<CORE12.Models.MODELCLASS>
+    <style>
+        body { 
+            background-color: aquamarine 
+        }
+    </style>
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>NAME</th>
+            <th>SURNAME</th>
+            <th>CITY</th>
+            <th>AGE</th>
+            <th>STATE</th>
+            <th>Edit</th>
+            <th>Delete</th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Surname</td>
+                <td>@item.City</td>
+                <td>@item.Age</td>
+                <td>@item.State</td>
+                <td><a href="@Url.Action("Edit","Home",new {item.Id})" class="btn btn-success" )>Edit</a></td>
+                <td><a href="@Url.Action("Delete","Home",new {item.Id})" class="btn btn-danger" )>Delete</a></td>
+
+            </tr>
+
+        }
+    </table>
